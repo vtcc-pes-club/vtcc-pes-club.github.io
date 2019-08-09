@@ -12,9 +12,9 @@ p {
 }
 
 #spin_img.enable {
-  animation-duration: 1s;
+  animation-duration: 0.2s;
   animation-name: spin;
-  animation-iteration-count: 4;
+  animation-iteration-count: 10;
   animation-direction: alternate;
   animation-delay: 0;
   animation-timing-function: linear;
@@ -26,10 +26,10 @@ p {
 
 @keyframes spin {
   from {
-    transform: scale(1, 1);
+    transform: rotateY(0deg);
   }
   to {
-	transform: scale(-1, 1);
+    transform: rotateY(180deg);
   }
 }
 
