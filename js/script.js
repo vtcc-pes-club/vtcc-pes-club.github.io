@@ -27,19 +27,20 @@ var clubs = [
 	"Paris Saint-Germain",
 	"Inter Milan (Internazionale)",
 	"Napoli"
-]
-var img = document.getElementById("spin_img")
-var txt = document.getElementById("content")
+];
+var img = document.getElementById("spin_img");
+var txt = document.getElementById("content");
+var prev_id = -1;
+var resuld_id = 0;
 
 img.addEventListener("click", clickImg, false);
 img.addEventListener("animationend", showResult, false);
-img.addEventListener("animationstart", startSpin, false);
 
 
 function clickImg(e) {
   img.className = "enable";
 
-  img.src = "src/vtcc.png"
+  img.src = "src/vtcc.png";
   txt.innerHTML = "Đang chọn đội";
 
   if (e) e.preventDefault();
@@ -48,10 +49,15 @@ function clickImg(e) {
 function showResult(e) {
   img.className = "";
 
-  let result_id = Math.floor(Math.random() * 13)
+  do {
+    result_id = Math.floor(Math.random() * 13);
+  } while (result_id === prev_id);
+  console.log(prev_id, result_id);
+
   img.src = logoUrls[result_id];
   txt.innerHTML = clubs[result_id];
+  prev_id = result_id;
   
   if (e) e.preventDefault();
-}
+};
 
