@@ -1,0 +1,35 @@
+#spin_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%
+}
+
+p {
+  text-align: center;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+#spin_img.enable {
+  animation-duration: 1s;
+  animation-name: spin;
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+  animation-delay: 0;
+  animation-timing-function: linear;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%
+}
+
+@keyframes spin {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+	transform: scale(-1, 1);
+  }
+}
+
