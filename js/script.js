@@ -40,7 +40,7 @@ img.addEventListener("animationend", showResult, false);
 function clickImg(e) {
   img.className = "enable";
 
-  img.src = "src/vtcc.png";
+  img.src = "assets/vtcc.png";
   txt.innerHTML = "Đang chọn đội";
 
   if (e) e.preventDefault();
