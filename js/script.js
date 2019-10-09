@@ -41,7 +41,7 @@ function clickImg(e) {
   img.className = "enable";
 
   img.src = "assets/vtcc.png";
-  txt.innerHTML = "Đang chọn đội";
+  txt.innerHTML = "Choosing Team";
 
   if (e) e.preventDefault();
 }
